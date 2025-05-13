@@ -1,0 +1,1 @@
+rmdir /s /q build & rmdir /s /q dist & rmdir /s /q Output & pyinstaller --onefile --windowed --icon=app.ico main.py && iscc setup.iss
