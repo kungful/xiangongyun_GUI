@@ -1,0 +1,2230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>643</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>30</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>顺势AI</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* 主窗口（QMainWindow）的边框样式 */
+QMainWindow {
+    background-color: #1f232a;  /* 窗口背景色 */
+    border: 2px solid #3e434c;  /* 自定义边框 */
+    border-radius: 8px;         /* 圆角（可选） */
+    padding: 0;                 /* 防止内部元素影响边框 */
+    margin: 0;
+}
+
+/* 通用样式（如你的原始代码） */
+* {
+    border: none;
+    background-color: transparent;
+    background: none;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+}
+
+/* 中央部件 */
+#centralwidget {
+    background-color: #1f232a;
+    border-radius: 6px;  /* 如果主窗口有圆角，这里可以小一点 */
+}
+
+/* 左侧面板 */
+#left {
+    background-color: #424242;
+    border-right: 1px solid #3e434c;  /* 右侧分隔线 */
+}
+
+/* 按钮样式 */
+QPushButton {
+    text-align: left;
+    padding: 2px 2px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="left" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item alignment="Qt::AlignmentFlag::AlignTop">
+        <widget class="QFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="menubtn">
+            <property name="toolTip">
+             <string>仙宫云账号</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+    border-radius: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>仙宫云账号</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/ico/ico/align-center.svg</normaloff>:/ico/ico/align-center.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignmentFlag::AlignTop">
+        <widget class="QFrame" name="frame_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="home">
+            <property name="toolTip">
+             <string>主页</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+    border-radius: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>主页</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/ico/ico/home.svg</normaloff>:/ico/ico/home.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="shiliBt">
+            <property name="styleSheet">
+             <string notr="true">QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+    border-radius: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>实例</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/ico/ico/package.svg</normaloff>:/ico/ico/package.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="jingxiang">
+            <property name="toolTip">
+             <string>镜像</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+    border-radius: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>私有镜像</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/ico/ico/align-justify.svg</normaloff>:/ico/ico/align-justify.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="jingxiang_2">
+            <property name="toolTip">
+             <string>镜像</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+    border-radius: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>公共镜像</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/ico/ico/align-justify.svg</normaloff>:/ico/ico/align-justify.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignmentFlag::AlignHCenter">
+        <widget class="QFrame" name="frame_4">
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QPushButton" name="comfyui">
+            <property name="toolTip">
+             <string>comfyui</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+    border-radius: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>comfyui</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/ico/ico/git-branch.svg</normaloff>:/ico/ico/git-branch.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="fengzhuang">
+            <property name="toolTip">
+             <string>封装流</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+    border-radius: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>封装流</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/ico/ico/box.svg</normaloff>:/ico/ico/box.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="fluxgym">
+            <property name="toolTip">
+             <string>fluxgym</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+    border-radius: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>fluxgym</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/ico/ico/coffee.svg</normaloff>:/ico/ico/coffee.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="shuchu">
+            <property name="toolTip">
+             <string>gptsovits</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+    border-radius: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>输出文件</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/ico/ico/file-text.svg</normaloff>:/ico/ico/file-text.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="quanbu">
+            <property name="toolTip">
+             <string>gptsovits</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+    border-radius: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>全部文件</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/ico/ico/folder.svg</normaloff>:/ico/ico/folder.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="quanbu_2">
+            <property name="toolTip">
+             <string>gptsovits</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+    border-radius: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>浏览器</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/ico/ico/globe.svg</normaloff>:/ico/ico/globe.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignmentFlag::AlignBottom">
+        <widget class="QFrame" name="frame_3">
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QPushButton" name="settings">
+            <property name="toolTip">
+             <string>点击设置</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+    border-radius: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/ico/ico/settings.svg</normaloff>:/ico/ico/settings.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="info">
+            <property name="toolTip">
+             <string>关于软件的详细信息</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+    border-radius: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>信息</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/ico/ico/info.svg</normaloff>:/ico/ico/info.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="help">
+            <property name="toolTip">
+             <string>帮助</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+    border-radius: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>帮助</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/ico/ico/help-circle.svg</normaloff>:/ico/ico/help-circle.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="body">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>1</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="zhuye_page1">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item alignment="Qt::AlignmentFlag::AlignTop">
+         <widget class="QFrame" name="frame_13">
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item>
+            <widget class="QTextBrowser" name="textBrowser">
+             <property name="styleSheet">
+              <string notr="true">QFrame {
+    background-color: transparent;
+    border-radius: 10px;
+}</string>
+             </property>
+             <property name="html">
+              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Microsoft YaHei UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DeepSeek-CJK-patch','Inter','system-ui','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Noto Sans','Ubuntu','Cantarell','Helvetica Neue','Oxygen','Open Sans','sans-serif'; color:#f8faff; background-color:#292a2d;&quot;&gt;您的访问令牌是敏感身份凭证，等同于账户密码。为确保安全，请务必遵循以下准则：&lt;/span&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
+&lt;li style=&quot; font-family:'DeepSeek-CJK-patch','Inter','system-ui','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Noto Sans','Ubuntu','Cantarell','Helvetica Neue','Oxygen','Open Sans','sans-serif'; color:#f8faff; background-color:#292a2d;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;严禁泄露&lt;/span&gt;：切勿通过聊天工具、邮件、代码仓库或截图等方式共享令牌。&lt;/li&gt;
+&lt;li style=&quot; font-family:'DeepSeek-CJK-patch','Inter','system-ui','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Noto Sans','Ubuntu','Cantarell','Helvetica Neue','Oxygen','Open Sans','sans-serif'; color:#f8faff; background-color:#292a2d;&quot; style=&quot; margin-top:4px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;最小化留存&lt;/span&gt;：使用后最好立即通过&lt;span style=&quot; color:#ff2024;&quot;&gt;官方控制台的账号管理&lt;/span&gt;删除令牌，避免长期有效导致风险。&lt;/li&gt;
+&lt;li style=&quot; font-family:'DeepSeek-CJK-patch','Inter','system-ui','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Noto Sans','Ubuntu','Cantarell','Helvetica Neue','Oxygen','Open Sans','sans-serif'; color:#f8faff; background-color:#292a2d;&quot; style=&quot; margin-top:4px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;软件最好到作者仓库下载&lt;/span&gt;：若要分享软件一定要清除访问令牌或者遵循以上第二点。&lt;/li&gt;&lt;/ol&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'DeepSeek-CJK-patch','Inter','system-ui','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Noto Sans','Ubuntu','Cantarell','Helvetica Neue','Oxygen','Open Sans','sans-serif'; color:#f8faff; background-color:#292a2d;&quot;&gt;⚠️ 若发现令牌意外暴露，请点击 &amp;quot;&lt;/span&gt;&lt;span style=&quot; font-family:'DeepSeek-CJK-patch','Inter','system-ui','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Noto Sans','Ubuntu','Cantarell','Helvetica Neue','Oxygen','Open Sans','sans-serif'; color:#ffbf00; background-color:#292a2d;&quot;&gt;获取访问令牌&lt;/span&gt;&lt;span style=&quot; font-family:'DeepSeek-CJK-patch','Inter','system-ui','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Noto Sans','Ubuntu','Cantarell','Helvetica Neue','Oxygen','Open Sans','sans-serif'; color:#f8faff; background-color:#292a2d;&quot;&gt;&amp;quot;按钮跳转到官网 立即删除并重新生成！&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'DeepSeek-CJK-patch','Inter','system-ui','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Noto Sans','Ubuntu','Cantarell','Helvetica Neue','Oxygen','Open Sans','sans-serif'; color:#f8faff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop">
+         <widget class="QFrame" name="shouye">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    background-color: #1b1b1b;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="inputMethodHints">
+           <set>Qt::InputMethodHint::ImhNone</set>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QLabel" name="tishi">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:26pt; color:#ffffff;&quot;&gt;输入仙宫云访问令牌&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lingpai">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>提示输入框要输入的内容</string>
+             </property>
+             <property name="toolTipDuration">
+              <number>-1</number>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #363636;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string extracomment="输入仙宫云访问令牌">输入仙宫云访问令牌</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_14">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #CC9933;
+    border-radius: 10px;
+    font: 10pt &quot;宋体&quot;;
+}
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Shape::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Shadow::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item alignment="Qt::AlignmentFlag::AlignLeft">
+               <widget class="QPushButton" name="pushButton_16">
+                <property name="styleSheet">
+                 <string notr="true">font: 12pt &quot;Microsoft YaHei UI&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>清除</string>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignmentFlag::AlignRight">
+               <widget class="QRadioButton" name="radioButton">
+                <property name="text">
+                 <string>记住令牌</string>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignmentFlag::AlignRight">
+               <widget class="QPushButton" name="pushButton_15">
+                <property name="styleSheet">
+                 <string notr="true">font: 12pt &quot;Microsoft YaHei UI&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>确定</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="huoqu">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #0088ff;
+    border-radius: 10px;
+    font: 24pt &quot;宋体&quot;;
+}
+
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+             </property>
+             <property name="text">
+              <string>获取访问令牌</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/ico/ico/anchor.svg</normaloff>:/ico/ico/anchor.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>64</width>
+               <height>64</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="zhuce">
+             <property name="toolTip">
+              <string>注册仙宫云账号</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #66CC00;
+    border-radius: 10px;
+    font: 24pt &quot;宋体&quot;;
+}
+
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+             </property>
+             <property name="text">
+              <string>注册</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/ico/ico/user-plus.svg</normaloff>:/ico/ico/user-plus.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>64</width>
+               <height>64</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignBottom">
+         <widget class="QFrame" name="coffeekuang">
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <widget class="QPushButton" name="coffee">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;请作者和咖啡&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #282828;
+    border-radius: 10px;
+    font: 8pt &quot;宋体&quot;;
+}
+
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+             </property>
+             <property name="text">
+              <string>请作者喝咖啡</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/ico/ico/gift.svg</normaloff>:/ico/ico/gift.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="shezhi_page2">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QFrame" name="frame_15">
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    background-color: #2F4F4F;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="styleSheet">
+              <string notr="true">font: 12pt &quot;Microsoft YaHei UI&quot;;</string>
+             </property>
+             <property name="text">
+              <string>设置comfyui端口</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="dailikuang_2">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">    background-color: #363636;</string>
+             </property>
+             <property name="placeholderText">
+              <string>默认8188</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDialogButtonBox" name="dailiBt_2">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #CC9933;
+    border-radius: 10px;
+    font: 16pt &quot;宋体&quot;;
+}
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+             </property>
+             <property name="standardButtons">
+              <set>QDialogButtonBox::StandardButton::Ok</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_16">
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    background-color: #2F4F4F;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="styleSheet">
+              <string notr="true">font: 12pt &quot;Microsoft YaHei UI&quot;;</string>
+             </property>
+             <property name="text">
+              <string>设置封装流端口</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="dailikuang_3">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">    background-color: #363636;</string>
+             </property>
+             <property name="placeholderText">
+              <string>默认7861</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDialogButtonBox" name="dailiBt_3">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #CC9933;
+    border-radius: 10px;
+    font: 16pt &quot;宋体&quot;;
+}
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+             </property>
+             <property name="standardButtons">
+              <set>QDialogButtonBox::StandardButton::Ok</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_17">
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    background-color: #2F4F4F;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <widget class="QLabel" name="label_8">
+             <property name="styleSheet">
+              <string notr="true">font: 12pt &quot;Microsoft YaHei UI&quot;;</string>
+             </property>
+             <property name="text">
+              <string>设置fluxgym端口</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="dailikuang_4">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #363636;</string>
+             </property>
+             <property name="placeholderText">
+              <string>默认7860</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDialogButtonBox" name="dailiBt_4">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #CC9933;
+    border-radius: 10px;
+    font: 16pt &quot;宋体&quot;;
+}
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+             </property>
+             <property name="standardButtons">
+              <set>QDialogButtonBox::StandardButton::Ok</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_19">
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    background-color: #2F4F4F;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_11">
+           <item>
+            <widget class="QLabel" name="label_10">
+             <property name="styleSheet">
+              <string notr="true">font: 12pt &quot;Microsoft YaHei UI&quot;;</string>
+             </property>
+             <property name="text">
+              <string>设置输出文件端口</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="dailikuang_6">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #363636;</string>
+             </property>
+             <property name="text">
+              <string>默认8080</string>
+             </property>
+             <property name="placeholderText">
+              <string>默认</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDialogButtonBox" name="dailiBt_6">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #CC9933;
+    border-radius: 10px;
+    font: 16pt &quot;宋体&quot;;
+}
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+             </property>
+             <property name="standardButtons">
+              <set>QDialogButtonBox::StandardButton::Ok</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_18">
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    background-color: #2F4F4F;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_10">
+           <item>
+            <widget class="QLabel" name="label_9">
+             <property name="styleSheet">
+              <string notr="true">font: 12pt &quot;Microsoft YaHei UI&quot;;</string>
+             </property>
+             <property name="text">
+              <string>设置全部文件端口</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="dailikuang_5">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #363636;</string>
+             </property>
+             <property name="text">
+              <string>默认8081</string>
+             </property>
+             <property name="placeholderText">
+              <string>默认7860</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDialogButtonBox" name="dailiBt_5">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #CC9933;
+    border-radius: 10px;
+    font: 16pt &quot;宋体&quot;;
+}
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+             </property>
+             <property name="standardButtons">
+              <set>QDialogButtonBox::StandardButton::Ok</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="xinxi_page3">
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="QTextBrowser" name="textBrowser">
+          <property name="styleSheet">
+           <string notr="true">background-color: #2d3848;
+    border-radius: 10px;</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Microsoft YaHei UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;顺势AI&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;版本：1.0-20250401(64位)&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2025-2025  hua&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;转换Qt Widgets Designer代码为python的命令如下示例：&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New'; color:#ffffff;&quot;&gt;pyside6-uic demo.ui &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New'; color:#81a1c1;&quot;&gt;-o&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New'; color:#ffffff;&quot;&gt; ui_demo.py&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New'; color:#ffffff;&quot;&gt;pyside6-rcc resources.qrc &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New'; color:#81a1c1;&quot;&gt;-o&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New'; color:#ffffff;&quot;&gt; resources_rc.py&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Courier New'; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;基于pyside6 ；&lt;span style=&quot; font-family:'Menlo','Roboto Mono','Courier New','Courier','monospace','Inter','sans-serif'; font-weight:600; color:#f8faff; background-color:#424242;&quot;&gt;PyQt6; python语言&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextBrowser" name="textBrowser">
+          <property name="styleSheet">
+           <string notr="true">background-color: #2d3848;
+    border-radius: 10px;</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Microsoft YaHei UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. 基本条款&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;✅ 本软件永久免费，允许个人和企业商业用途使用。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;❌ 禁止行为：&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;出售、出租或捆绑本软件盈利；&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;修改软件并声称自己是原作者。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. 免责声明&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;本软件按“原样”提供，不承担因使用导致的任何数据丢失、设备损坏或法律责任。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;开发者无义务提供技术支持或更新。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3. 无恶意代码声明&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;开发者郑重声明：本软件不包含任何病毒、后门、间谍软件、挖矿程序等恶意代码。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;用户可通过[第三方检测工具/网址]自行验证（可选）。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4. 举报与责任&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;发现倒卖或安全问题请联系：wechat: KritaBlenderComfyui&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;违反本协议者，开发者保留追究法律责任的权利。&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="bangzhu_page4">
+       <property name="styleSheet">
+        <string notr="true">    background-color: #6c6c6c;</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QFrame" name="frame_21">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_21">
+           <item>
+            <widget class="QTextBrowser" name="textBrowser_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: #363636;</string>
+             </property>
+             <property name="html">
+              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Microsoft YaHei UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;问题反馈，请导航到仓库地址进行反馈：&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#00ff1e;&quot;&gt;https://github.com/kungful/xiangongyun_GUI.git&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="zhanghao_page5">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item alignment="Qt::AlignmentFlag::AlignTop">
+         <widget class="QFrame" name="zhanghaoapi">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>160</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    background-color: #3d5843 ;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item alignment="Qt::AlignmentFlag::AlignTop">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;用户信息&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignTop">
+            <widget class="QListWidget" name="listWidget">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string> 昵称：</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string> uuid:</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string> 电话：</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>10</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    background-color: #3d5843 ;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item alignment="Qt::AlignmentFlag::AlignTop">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;账户余额&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignTop">
+            <widget class="QListWidget" name="listWidget_2">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string> 余额：</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignRight">
+            <widget class="QPushButton" name="pushButton_3">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #CCCC33;
+    border-radius: 10px;
+    font: 16pt &quot;宋体&quot;;
+}
+
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+             </property>
+             <property name="text">
+              <string>查询</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="zhifufangshi">
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    background-color: #3d5843 ;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <item alignment="Qt::AlignmentFlag::AlignTop">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;账户充值&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignRight">
+            <widget class="QComboBox" name="comboBox">
+             <property name="minimumSize">
+              <size>
+               <width>146</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #363636;</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>wechat</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string extracomment="支付方式">alipay</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignRight">
+            <widget class="QSpinBox" name="spinBox">
+             <property name="minimumSize">
+              <size>
+               <width>160</width>
+               <height>26</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #363636;</string>
+             </property>
+             <property name="specialValueText">
+              <string>请输入; 最少充值5元</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignRight">
+            <widget class="QFrame" name="frame_6">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #CCCC33;
+    border-radius: 10px;
+    font: 24pt &quot;宋体&quot;;
+}
+
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Shape::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Shadow::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QPushButton" name="pushButton_2">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: #CCCC33;
+    border-radius: 10px;
+    font: 20pt &quot;宋体&quot;;
+}
+
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+                </property>
+                <property name="text">
+                 <string>确认充值</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_7">
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+    background-color: #3d5843 ;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item alignment="Qt::AlignmentFlag::AlignTop">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;查询订单&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListWidget" name="listWidget_4"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_4">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #CCCC33;
+    border-radius: 10px;
+    font: 16pt &quot;宋体&quot;;
+}
+
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+             </property>
+             <property name="text">
+              <string>                             查询</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="shili_page6">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>693</width>
+             <height>181</height>
+            </rect>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_17">
+            <item>
+             <widget class="QFrame" name="frame_9">
+              <property name="frameShape">
+               <enum>QFrame::Shape::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Shadow::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_16">
+               <item>
+                <widget class="QTabWidget" name="tabWidget">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: #363636;</string>
+                 </property>
+                 <property name="currentIndex">
+                  <number>0</number>
+                 </property>
+                 <widget class="QWidget" name="tab">
+                  <attribute name="title">
+                   <string>实例1</string>
+                  </attribute>
+                  <layout class="QVBoxLayout" name="verticalLayout_19">
+                   <item>
+                    <widget class="QListWidget" name="listWidget_5">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: #363636;</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>实例ID：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>数据中心名称：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>GPU型号：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>CPU型号：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>CPU核心数：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>内存大小：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>系统磁盘大小：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>数据磁盘大小：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>可扩展数据磁盘大小：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>云端储存路径：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>每小时价格：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>ssh_key:</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>ssh_port:</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>ssh_user:</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>password:</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>jupyter_token:</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>jupyter_url:</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>xgcos_token:</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>xgcos_url:</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>状态：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>ssh_domain:</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>web_url:</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>镜像ID：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>镜像类型：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>镜像价格：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>镜像保存：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>基础价格：</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>auto_shutdown:</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>auto_shutdown_action:</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_11">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+    background-color: #CC9933;
+    border-radius: 10px;
+    font: 10pt &quot;宋体&quot;;
+}
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_4">
+                      <item>
+                       <widget class="QPushButton" name="pushButton_5">
+                        <property name="text">
+                         <string> 开机</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resources.qrc">
+                          <normaloff>:/ico/ico/skip-forward.svg</normaloff>:/ico/ico/skip-forward.svg</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pushButton_7">
+                        <property name="text">
+                         <string>储存镜像</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resources.qrc">
+                          <normaloff>:/ico/ico/arrow-down.svg</normaloff>:/ico/ico/arrow-down.svg</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pushButton_10">
+                        <property name="text">
+                         <string>关机保留GPU</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resources.qrc">
+                          <normaloff>:/ico/ico/phone-missed.svg</normaloff>:/ico/ico/phone-missed.svg</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pushButton_9">
+                        <property name="text">
+                         <string>关机释放GPU</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resources.qrc">
+                          <normaloff>:/ico/ico/phone-off.svg</normaloff>:/ico/ico/phone-off.svg</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pushButton_8">
+                        <property name="text">
+                         <string>关机并销毁</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resources.qrc">
+                          <normaloff>:/ico/ico/x.svg</normaloff>:/ico/ico/x.svg</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pushButton_13">
+                        <property name="text">
+                         <string>储存并销毁</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resources.qrc">
+                          <normaloff>:/ico/ico/arrow-down-circle.svg</normaloff>:/ico/ico/arrow-down-circle.svg</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pushButton_11">
+                        <property name="text">
+                         <string>销毁实例</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resources.qrc">
+                          <normaloff>:/ico/ico/zap-off.svg</normaloff>:/ico/ico/zap-off.svg</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="tab_2">
+                  <attribute name="title">
+                   <string>实例2</string>
+                  </attribute>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="jingxiang_page7">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item alignment="Qt::AlignmentFlag::AlignTop">
+         <widget class="QFrame" name="frame_8">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_15">
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+    background-color: #3F454F;
+    border-radius: 10px;
+    border-radius: 10px;
+}</string>
+             </property>
+             <property name="text">
+              <string>镜像总数：</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListWidget" name="listWidget_3">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #363636;</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>   镜像ID：</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>镜像名字：</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>      采用：</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>镜像大小：</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>可用状态：</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>是否原主：</string>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_12">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #CC9933;
+    border-radius: 10px;
+    font: 10pt &quot;宋体&quot;;
+}
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Shape::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Shadow::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item alignment="Qt::AlignmentFlag::AlignLeft">
+               <widget class="QPushButton" name="pushButton_14">
+                <property name="text">
+                 <string>销毁镜像</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resources.qrc">
+                  <normaloff>:/ico/ico/x-octagon.svg</normaloff>:/ico/ico/x-octagon.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignmentFlag::AlignRight">
+               <widget class="QPushButton" name="pushButton_6">
+                <property name="styleSheet">
+                 <string notr="true">font: 10pt &quot;Microsoft YaHei UI&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>部署此镜像</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resources.qrc">
+                  <normaloff>:/ico/ico/shopping-bag.svg</normaloff>:/ico/ico/shopping-bag.svg</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_10">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #CCCC33;
+    border-radius: 10px;
+    font: 20pt &quot;宋体&quot;;
+}
+
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Shape::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Shadow::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_18"/>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="fengzhuang_page8">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8"/>
+      </widget>
+      <widget class="QWidget" name="comfyui_page9">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8"/>
+      </widget>
+      <widget class="QWidget" name="list_jingxiang">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QScrollArea" name="scrollArea_2">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>587</width>
+             <height>138</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_22">
+            <item alignment="Qt::AlignmentFlag::AlignTop">
+             <widget class="QFrame" name="frame_20">
+              <property name="frameShape">
+               <enum>QFrame::Shape::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Shadow::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_23">
+               <item>
+                <widget class="QLabel" name="label_11">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: #363636;</string>
+                 </property>
+                 <property name="text">
+                  <string>软件作者（推荐) : h开发者的镜像  更新于 2025-03-31_160.86GB 镜像描述: free；永久免费，持续开发</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignmentFlag::AlignTop">
+                <widget class="QListWidget" name="listWidget_7">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: #363636;</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>7b36c1a3-da41-4676-b5b3-03ec25d6e197</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: #CC9933;
+    border-radius: 10px;
+    font: 10pt &quot;宋体&quot;;
+}
+QPushButton:pressed {
+    background-color: #4F6F6F; /* 按下时的背景颜色 */
+}
+font: 10pt &quot;Microsoft YaHei UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>部署镜像</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resources.qrc">
+                   <normaloff>:/ico/ico/shopping-bag.svg</normaloff>:/ico/ico/shopping-bag.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="fluxgym_page11">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8"/>
+      </widget>
+      <widget class="QWidget" name="zanzhu_page12">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8"/>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
