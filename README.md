@@ -1,3 +1,6 @@
+运行源码
+python main.py
+
 # xiangongyun_GUI
 windows_仙宫云GUI
 1. 基本条款
